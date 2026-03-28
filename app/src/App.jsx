@@ -7,7 +7,8 @@ function App() {
 //add
   function addTodo() {
     console.log("cliked add");
-    if (input === "") return;
+    if (input === "") 
+      return;
     let obj = { id: todo.length + 1, text: input, isCompleted: false };
     setTodo([...todo, obj]);
     setInput("");
@@ -24,7 +25,7 @@ function App() {
   function completeTodo(id){
     console.log("clicked:",id)
     let updated=todo.map((item)=>{
-      if(item.id==id){
+      if(item.id === id){
         item.isCompleted=!item.isCompleted
         return item
       }
